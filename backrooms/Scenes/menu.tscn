@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ce721ykaspukj"]
+
+[ext_resource type="Texture2D" uid="uid://fcmirhn43wps" path="res://Assets/the-backrooms-8hmdrwfhzhbpebgv.jpg" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://nwivm1lw1fin" path="res://Scripts/menu_controller.gd" id="1_xhh6f"]
+
+[node name="Menu" type="Control" unique_id=986801300]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhh6f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2047591087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3845481, 0.7442868, 0.82798684, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1723664271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1rerr")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=41301149]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -122.0
+offset_right = 126.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="BotonJugar" type="Button" parent="VBoxContainer" unique_id=1278065936]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "JUGAR"
+
+[node name="BotonSalir" type="Button" parent="VBoxContainer" unique_id=909591669]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonSalir" to="." method="_on_boton_salir_pressed"]

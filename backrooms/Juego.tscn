@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://baqc6ki2ylssy"]
+
+[ext_resource type="PackedScene" uid="uid://cciye7m7ixddy" path="res://Scenes/Player.tscn" id="1_0d2wr"]
+[ext_resource type="Material" uid="uid://x1dk1ubxuiy" path="res://pared_backroom.tres" id="1_5q1ir"]
+[ext_resource type="Texture2D" uid="uid://ci70mhb6esd3u" path="res://Assets/materials/wallpaper/wallpaper_color.png" id="2_bs78y"]
+[ext_resource type="Texture2D" uid="uid://pm3gq0lmk6e8" path="res://Assets/materials/wallpaper/wallpaper_rough.png" id="3_upxd2"]
+[ext_resource type="Texture2D" uid="uid://bdqlml6u23cvb" path="res://Assets/materials/wallpaper/wallpaper_normal.png" id="4_lym1s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itaud"]
+albedo_texture = ExtResource("2_bs78y")
+roughness_texture = ExtResource("4_lym1s")
+normal_enabled = true
+normal_texture = ExtResource("3_upxd2")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0d2wr"]
+
+[sub_resource type="Sky" id="Sky_bgojs"]
+sky_material = SubResource("ProceduralSkyMaterial_0d2wr")
+
+[sub_resource type="Environment" id="Environment_aio1g"]
+background_mode = 1
+background_color = Color(0.949271, 0.9179285, 0.75103414, 1)
+background_energy_multiplier = 0.45
+sky = SubResource("Sky_bgojs")
+ambient_light_source = 2
+ambient_light_color = Color(0.8942235, 0.8463864, 0.8150106, 1)
+
+[node name="Juego" type="Node3D" unique_id=1788752748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2013245, 0, 0)
+
+[node name="Suelo" type="CSGBox3D" parent="." unique_id=1601190532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.112562, -0.5622189, -2.4113922)
+use_collision = true
+size = Vector3(52.03607, 0.001, 65.78088)
+material = ExtResource("1_5q1ir")
+
+[node name="Suelo2" type="CSGBox3D" parent="." unique_id=16628189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.079603, 2.5818124, -6.723169)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 7.627777)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo3" type="CSGBox3D" parent="." unique_id=1901482702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4661117, 2.5818124, -4.8553896)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 10.837585)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo6" type="CSGBox3D" parent="." unique_id=528701937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.064102, 2.5818124, 11.3203335)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 28.214561)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo7" type="CSGBox3D" parent="." unique_id=752137761]
+transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, -1.3794689, 3.9466023, -0.8100109)
+use_collision = true
+size = Vector3(0.3083496, 68.09766, 64.34011)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo8" type="CSGBox3D" parent="." unique_id=2014326492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.099192, 2.5818124, 1.0269418)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 7.627777)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo9" type="CSGBox3D" parent="." unique_id=1188168638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.553476, 2.5818124, 2.894721)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 10.837585)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo10" type="CSGBox3D" parent="." unique_id=1889834689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.099192, 2.5818124, 17.280415)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 7.627777)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo11" type="CSGBox3D" parent="." unique_id=1063735958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.270796, 2.5818124, -1.856041)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 64.22429)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo12" type="CSGBox3D" parent="." unique_id=1505766799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.759424, 2.5818124, -1.856041)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 64.22429)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo13" type="CSGBox3D" parent="." unique_id=801984861]
+transform = Transform3D(-0.010279864, 0, 0.9999472, 0, 1, 0, -0.9999472, 0, -0.010279864, -0.4446373, 2.5818133, 29.350267)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 64.22429)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Suelo14" type="CSGBox3D" parent="." unique_id=1936154110]
+transform = Transform3D(-0.010279864, 0, 0.9999472, 0, 1, 0, -0.9999472, 0, -0.010279864, -0.4446373, 2.5818133, -32.515236)
+use_collision = true
+size = Vector3(0.3083496, 6.2890625, 64.22429)
+material = SubResource("StandardMaterial3D_itaud")
+
+[node name="Player" parent="." unique_id=1239368459 instance=ExtResource("1_0d2wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2156315, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090799162]
+environment = SubResource("Environment_aio1g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1217974070]
+transform = Transform3D(0.83364487, 0.3734771, -0.40687966, -5.751892e-09, 0.73669934, 0.6762205, 0.55230075, -0.5637278, 0.6141457, 0, 2.4817643, 0)
+shadow_enabled = true
