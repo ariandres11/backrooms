@@ -6,6 +6,7 @@
 height = 3.0
 
 [node name="Player" type="CharacterBody3D" unique_id=1239368459]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_rpqav")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1205279790]

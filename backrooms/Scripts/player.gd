@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 150.0
 const JUMP_VELOCITY = 4.5
 @onready var camera_pivot = $camera_pivot
 var mouse_sensitivity = 0.002
@@ -14,7 +14,8 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	#and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
+	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera_pivot.rotate_x(-event.relative.y * mouse_sensitivity)
 		#se limita la rotacion para simular la altura del personaje
