@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 150.0
+const SPEED = 80.0
 const JUMP_VELOCITY = 4.5
 @onready var camera_pivot = $camera_pivot
 var mouse_sensitivity = 0.002

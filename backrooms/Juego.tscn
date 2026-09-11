@@ -4,78 +4,45 @@
 [ext_resource type="Material" uid="uid://x1dk1ubxuiy" path="res://pared_backroom.tres" id="1_5q1ir"]
 [ext_resource type="PackedScene" uid="uid://b686dc6it3txt" path="res://enemigo.tscn" id="2_sbve1"]
 [ext_resource type="Material" uid="uid://bvvsus3qnocm" path="res://piso.tres" id="4_bs78y"]
-[ext_resource type="Texture2D" uid="uid://bjov33thwkh8w" path="res://Assets/materials/FloorTiles/FloorTilesDeffuse.png" id="4_upxd2"]
-[ext_resource type="Texture2D" uid="uid://ce2103nkj16k5" path="res://Assets/materials/FloorTiles/FloorTilesNormal.png" id="5_lym1s"]
-[ext_resource type="Texture2D" uid="uid://bfxowbrmeox5t" path="res://Assets/materials/FloorTiles/FloorTilesSpacular.png" id="6_itaud"]
+[ext_resource type="Texture2D" uid="uid://d1u85nar47iw5" path="res://Assets/materials/carpet/carpet_color.png" id="4_upxd2"]
+[ext_resource type="Texture2D" uid="uid://byww8bxtdcjvk" path="res://Assets/materials/carpet/carpet_normal.png" id="5_lym1s"]
+[ext_resource type="Texture2D" uid="uid://dybjevxtmdie8" path="res://Assets/materials/carpet/carpet_rough.png" id="6_itaud"]
+[ext_resource type="Material" uid="uid://d0pb5o4ass8rd" path="res://material_luces.tres" id="8_lym1s"]
 
-[sub_resource type="Environment" id="Environment_aio1g"]
+[sub_resource type="Environment" id="Environment_upxd2"]
 background_mode = 1
-background_color = Color(0.9890204, 0.83643633, 0.9623557, 1)
-background_energy_multiplier = 0.0
-ambient_light_source = 2
-ambient_light_color = Color(0.87383175, 0.75713515, 1.1551381e-06, 0.38039216)
-ambient_light_energy = 1.85
+background_color = Color(0.98379856, 1, 0.57721937, 0.21176471)
+background_energy_multiplier = 0.5
+ambient_light_color = Color(0.9885848, 0.63782185, 0.48571807, 1)
+ambient_light_energy = 0.77
+reflected_light_source = 1
 tonemap_mode = 2
-tonemap_exposure = 7.35
-tonemap_white = 16.0
+tonemap_exposure = 1.4
+ssr_enabled = true
 ssao_enabled = true
-ssao_radius = 4.79
-ssao_intensity = 1.44
-ssao_power = 0.53032905
-ssao_detail = 3.35
+ssao_radius = 9.34
 ssao_horizon = 0.0
-ssao_sharpness = 1.0
-ssao_light_affect = 1.0
 ssil_enabled = true
-ssil_radius = 14.44
-ssil_intensity = 1.54
-ssil_sharpness = 1.0
-sdfgi_read_sky_light = false
-sdfgi_bounce_feedback = 1.29
-sdfgi_min_cell_size = 9.765625e-05
-glow_enabled = true
-glow_levels/1 = 4.15
-glow_levels/2 = 10.4
-glow_levels/3 = 0.0
-glow_levels/5 = 4.05
-glow_normalized = true
-glow_intensity = 0.0
-glow_strength = 1.85
-glow_bloom = 1.0
-glow_blend_mode = 0
-glow_hdr_scale = 3.55
-glow_hdr_luminance_cap = 20.15
-fog_enabled = true
-fog_light_color = Color(0.623378, 0.5546137, 0, 1)
-fog_light_energy = 0.11
-fog_height = -1024.0
-fog_height_density = 16.0
-adjustment_enabled = true
-adjustment_brightness = 1.2
-adjustment_contrast = 1.175
-adjustment_saturation = 0.65
+ssil_radius = 5.7
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_aio1g"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb1ij"]
-albedo_texture = ExtResource("4_upxd2")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itaud"]
+albedo_color = Color(0.99979204, 0.92401284, 0.7664576, 1)
+metallic = 1.0
+metallic_texture = ExtResource("4_upxd2")
 roughness_texture = ExtResource("6_itaud")
 normal_enabled = true
 normal_texture = ExtResource("5_lym1s")
-uv1_scale = Vector3(20, 20, 1)
+uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upxd2"]
-albedo_color = Color(0.34524664, 0.3450524, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lym1s"]
-emission_enabled = true
-emission = Color(0.427493, 0.42749307, 0.42749307, 1)
+albedo_color = Color(0.29411766, 0.29411766, 0, 0.38039216)
 
 [node name="Juego" type="Node3D" unique_id=1788752748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2013245, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090799162]
-environment = SubResource("Environment_aio1g")
+environment = SubResource("Environment_upxd2")
 
 [node name="Player2" parent="." unique_id=679995748 instance=ExtResource("1_0d2wr")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 140.909, -3, 0)
@@ -97,7 +64,7 @@ material = ExtResource("4_bs78y")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.901901, 2.0495682, -3.1034546)
 use_collision = true
 size = Vector3(976.63885, 0.001, 1108.0115)
-material = SubResource("StandardMaterial3D_bb1ij")
+material = SubResource("StandardMaterial3D_itaud")
 
 [node name="Pared4" type="CSGBox3D" parent="NavigationRegion3D" unique_id=507866900]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 55.302826, 26.261703, -543.0193)
@@ -226,32 +193,529 @@ size = Vector3(3, 148.70459, 130)
 material = ExtResource("1_5q1ir")
 
 [node name="base panel" type="CSGBox3D" parent="NavigationRegion3D" unique_id=79351837]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3063965, 89.474655, -15.032612)
-size = Vector3(28, 0.3, 38)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.3064, 87.474655, 31.967388)
+size = Vector3(20, 0.3, 20)
 material = SubResource("StandardMaterial3D_upxd2")
 metadata/_edit_group_ = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1850961873]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.488329, 89.64652, 1.5735388)
-size = Vector3(26, 1, 4)
-material = SubResource("StandardMaterial3D_lym1s")
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel" unique_id=1602214667]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D" unique_id=980217]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.488329, 89.64652, -6.0742245)
-size = Vector3(26, 1, 4)
-material = SubResource("StandardMaterial3D_lym1s")
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel" unique_id=1425333714]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D" unique_id=767824959]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.488329, 89.64652, -14.598181)
-size = Vector3(26, 1, 4)
-material = SubResource("StandardMaterial3D_lym1s")
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel" unique_id=507606910]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1797361872]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.488329, 89.64652, -22.486408)
-size = Vector3(26, 1, 4)
-material = SubResource("StandardMaterial3D_lym1s")
+[node name="base panel2" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1731898408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.3064, 87.474655, 143.96739)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1333893608]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.488329, 89.64652, -31.436857)
-size = Vector3(26, 1, 4)
-material = SubResource("StandardMaterial3D_lym1s")
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel2" unique_id=267260521]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel2" unique_id=2045136617]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel2" unique_id=1175733812]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel3" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1799782659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.3064, 87.474655, 235.96739)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel3" unique_id=306617712]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel3" unique_id=1249734109]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel3" unique_id=403727786]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel4" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1451028407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.3064, 87.474655, 341.9674)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel4" unique_id=887562325]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel4" unique_id=1646329205]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel4" unique_id=403097207]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel5" type="CSGBox3D" parent="NavigationRegion3D" unique_id=836458186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.3064, 87.474655, 422.9674)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel5" unique_id=1291809995]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel5" unique_id=976262422]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel5" unique_id=658553254]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel6" type="CSGBox3D" parent="NavigationRegion3D" unique_id=391186585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.3064, 87.474655, 547.9674)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel6" unique_id=2054972815]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel6" unique_id=49097808]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel6" unique_id=651704232]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel7" type="CSGBox3D" parent="NavigationRegion3D" unique_id=105381568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.3064, 87.474655, 547.9674)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel7" unique_id=1703603416]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel7" unique_id=1427834202]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel7" unique_id=318383717]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel8" type="CSGBox3D" parent="NavigationRegion3D" unique_id=633215741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.3064, 87.474655, 338.9674)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel8" unique_id=1884988376]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel8" unique_id=1988285669]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel8" unique_id=1747420561]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel9" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1953394941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.3064, 87.474655, 135.9674)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel9" unique_id=864994780]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel9" unique_id=653489059]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel9" unique_id=1529628485]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel10" type="CSGBox3D" parent="NavigationRegion3D" unique_id=65014264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.3064, 87.474655, -109.03259)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel10" unique_id=960081905]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel10" unique_id=1160605077]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel10" unique_id=1975167990]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel11" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1430027526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.3064, 87.474655, -286.0326)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel11" unique_id=207785581]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel11" unique_id=1787213265]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel11" unique_id=1886524269]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel12" type="CSGBox3D" parent="NavigationRegion3D" unique_id=799455604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.3064, 87.474655, -286.0326)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel12" unique_id=376782824]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel12" unique_id=955358123]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel12" unique_id=1769476253]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel13" type="CSGBox3D" parent="NavigationRegion3D" unique_id=834165906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -157, 0, 0)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel13" unique_id=1663495340]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel13" unique_id=1786171466]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel13" unique_id=982933387]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel14" type="CSGBox3D" parent="NavigationRegion3D" unique_id=293246308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -157, 0, 156)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel14" unique_id=1246202639]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel14" unique_id=1730104934]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel14" unique_id=1502085993]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel15" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1010464953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -157, 0, 303)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel15" unique_id=1102052682]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel15" unique_id=1653053775]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel15" unique_id=30391807]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel16" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1945224939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -251, 0, 303)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel16" unique_id=559507699]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel16" unique_id=161691454]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel16" unique_id=287692795]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel17" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1868709987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 303)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel17" unique_id=1627418179]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel17" unique_id=1720487527]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel17" unique_id=31330591]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel18" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1912516431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 445)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel18" unique_id=1040597490]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel18" unique_id=1362245416]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel18" unique_id=1991023086]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel19" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1427358611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -165, 0, 445)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel19" unique_id=1695200202]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel19" unique_id=1597850235]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel19" unique_id=145174968]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel20" type="CSGBox3D" parent="NavigationRegion3D" unique_id=927817196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -293, 0, 445)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel20" unique_id=283286539]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel20" unique_id=1537715866]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel20" unique_id=1120612893]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel21" type="CSGBox3D" parent="NavigationRegion3D" unique_id=424459164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -396, 0, 445)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel21" unique_id=723892593]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel21" unique_id=991843480]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel21" unique_id=1684356115]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="base panel22" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1188247539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -396, 0, 445)
+size = Vector3(20, 0.3, 20)
+material = SubResource("StandardMaterial3D_upxd2")
+metadata/_edit_group_ = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="NavigationRegion3D/base panel22" unique_id=163959104]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="NavigationRegion3D/base panel22" unique_id=1658160097]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, 0)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="NavigationRegion3D/base panel22" unique_id=1149593805]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, -0.4, -8)
+radius = 0.7
+height = 20.0
+material = ExtResource("8_lym1s")
