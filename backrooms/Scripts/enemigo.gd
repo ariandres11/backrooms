@@ -1,11 +1,9 @@
 extends CharacterBody3D
-
-@export var speed: float = 150
+@export var speed: float = 250
 @onready var player: CharacterBody3D = $"../Player2"
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
-var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-
+var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready() -> void:
 	await get_tree().physics_frame
 
