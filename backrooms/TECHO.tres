@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bt1or5tcc02e6"]
+
+[ext_resource type="Texture2D" uid="uid://bjov33thwkh8w" path="res://Assets/materials/FloorTiles/FloorTilesDeffuse.png" id="1_7yhr2"]
+[ext_resource type="Texture2D" uid="uid://ce2103nkj16k5" path="res://Assets/materials/FloorTiles/FloorTilesNormal.png" id="2_i7ysp"]
+
+[resource]
+albedo_texture = ExtResource("1_7yhr2")
+roughness_texture = ExtResource("1_7yhr2")
+normal_enabled = true
+normal_texture = ExtResource("2_i7ysp")
+uv1_scale = Vector3(5, 5, 30)

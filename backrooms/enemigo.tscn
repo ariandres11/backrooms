@@ -14,6 +14,7 @@ material = SubResource("StandardMaterial3D_becj5")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 motion_mode = 1
 script = ExtResource("1_a5tj2")
+speed = 300.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1496102576]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

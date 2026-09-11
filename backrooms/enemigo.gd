@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 100
+@export var speed: float = 150
 @onready var player: CharacterBody3D = $"../Player2"
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
