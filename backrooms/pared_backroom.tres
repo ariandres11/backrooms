@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://pm3gq0lmk6e8" path="res://Assets/materials/wallpaper/wallpaper_rough.png" id="3_33pkt"]
 
 [resource]
-albedo_color = Color(1, 0.8784314, 0.84313726, 1)
+albedo_color = Color(0.9999997, 0.9148961, 0.4578477, 1)
 albedo_texture = ExtResource("1_68yp7")
 roughness_texture = ExtResource("3_33pkt")
 normal_enabled = true
