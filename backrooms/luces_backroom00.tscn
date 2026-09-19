@@ -1,0 +1,541 @@
+[gd_scene format=3 uid="uid://d0growbm7rh5d"]
+
+[ext_resource type="Script" uid="uid://b1pa8m38o6r3u" path="res://generador_luces.gd" id="1_udfsn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lw84h"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 0.8987792, 0.622811, 1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lpo3d"]
+resource_name = "backroom00_Cube_003"
+_surfaces = [{
+"aabb": AABB(-0.3140998, 0, -0.3140993, 0.6281991, 1e-05, 0.6281996),
+"attribute_data": PackedByteArray(249, 235, 42, 169, 242, 237, 49, 167, 242, 237, 42, 169, 249, 235, 49, 167),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_lw84h"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dfe5a"]
+data = PackedVector3Array(-0.3141, 0, 0.3141, 0.3141, 0, -0.3141, 0.3141, 0, 0.3141, -0.3141, 0, 0.3141, -0.3141, 0, -0.3141, 0.3141, 0, -0.3141)
+
+[node name="GeneradorLuces" type="Node3D" unique_id=1522236622]
+script = ExtResource("1_udfsn")
+separacion_metros = 50.0
+
+[node name="Luz" type="MeshInstance3D" parent="." unique_id=993749544]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Luz" unique_id=326917014]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Luz/StaticBody3D" unique_id=1610942502]
+shape = SubResource("ConcavePolygonShape3D_dfe5a")
+
+[node name="@MeshInstance3D@140565" type="MeshInstance3D" parent="." unique_id=1160047068]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140566" type="MeshInstance3D" parent="." unique_id=585908284]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140567" type="MeshInstance3D" parent="." unique_id=1327928272]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140568" type="MeshInstance3D" parent="." unique_id=831436562]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140569" type="MeshInstance3D" parent="." unique_id=1393546343]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140570" type="MeshInstance3D" parent="." unique_id=297243165]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140571" type="MeshInstance3D" parent="." unique_id=396967420]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140572" type="MeshInstance3D" parent="." unique_id=496909628]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140573" type="MeshInstance3D" parent="." unique_id=405005862]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -244, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140574" type="MeshInstance3D" parent="." unique_id=111963873]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140575" type="MeshInstance3D" parent="." unique_id=874481485]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140576" type="MeshInstance3D" parent="." unique_id=1162509984]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140577" type="MeshInstance3D" parent="." unique_id=1818632288]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140578" type="MeshInstance3D" parent="." unique_id=412104129]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140579" type="MeshInstance3D" parent="." unique_id=536529064]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140580" type="MeshInstance3D" parent="." unique_id=1096438378]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140581" type="MeshInstance3D" parent="." unique_id=2074338225]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140582" type="MeshInstance3D" parent="." unique_id=1490825060]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140583" type="MeshInstance3D" parent="." unique_id=2046758658]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -194, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140584" type="MeshInstance3D" parent="." unique_id=1260942326]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140585" type="MeshInstance3D" parent="." unique_id=812452455]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140586" type="MeshInstance3D" parent="." unique_id=1949616648]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140587" type="MeshInstance3D" parent="." unique_id=1896286734]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140588" type="MeshInstance3D" parent="." unique_id=531651442]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140589" type="MeshInstance3D" parent="." unique_id=999701161]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140590" type="MeshInstance3D" parent="." unique_id=437680296]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140591" type="MeshInstance3D" parent="." unique_id=1204846259]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140592" type="MeshInstance3D" parent="." unique_id=1624811145]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140593" type="MeshInstance3D" parent="." unique_id=602226893]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -144, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140594" type="MeshInstance3D" parent="." unique_id=2090662713]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140595" type="MeshInstance3D" parent="." unique_id=354330095]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140596" type="MeshInstance3D" parent="." unique_id=305715800]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140597" type="MeshInstance3D" parent="." unique_id=1958337001]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140598" type="MeshInstance3D" parent="." unique_id=650411506]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140599" type="MeshInstance3D" parent="." unique_id=640778758]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140600" type="MeshInstance3D" parent="." unique_id=1086282379]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140601" type="MeshInstance3D" parent="." unique_id=1557319727]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140602" type="MeshInstance3D" parent="." unique_id=1716451465]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140603" type="MeshInstance3D" parent="." unique_id=879231379]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -94, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140604" type="MeshInstance3D" parent="." unique_id=1829490377]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140605" type="MeshInstance3D" parent="." unique_id=1020946831]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140606" type="MeshInstance3D" parent="." unique_id=883944323]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140607" type="MeshInstance3D" parent="." unique_id=1037327437]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140608" type="MeshInstance3D" parent="." unique_id=1008500463]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140609" type="MeshInstance3D" parent="." unique_id=1918753303]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140610" type="MeshInstance3D" parent="." unique_id=1480863654]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140611" type="MeshInstance3D" parent="." unique_id=1725215450]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140612" type="MeshInstance3D" parent="." unique_id=472355824]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140613" type="MeshInstance3D" parent="." unique_id=1947643852]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, -44, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140614" type="MeshInstance3D" parent="." unique_id=1796197304]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140615" type="MeshInstance3D" parent="." unique_id=2006720264]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140616" type="MeshInstance3D" parent="." unique_id=32976384]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140617" type="MeshInstance3D" parent="." unique_id=1429423660]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140618" type="MeshInstance3D" parent="." unique_id=1875996103]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140619" type="MeshInstance3D" parent="." unique_id=1503644010]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140620" type="MeshInstance3D" parent="." unique_id=1600435136]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140621" type="MeshInstance3D" parent="." unique_id=99080992]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140622" type="MeshInstance3D" parent="." unique_id=863077725]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140623" type="MeshInstance3D" parent="." unique_id=427478621]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 6, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140624" type="MeshInstance3D" parent="." unique_id=1534733755]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140625" type="MeshInstance3D" parent="." unique_id=1890191209]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140626" type="MeshInstance3D" parent="." unique_id=1904565090]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140627" type="MeshInstance3D" parent="." unique_id=253493271]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140628" type="MeshInstance3D" parent="." unique_id=758809959]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140629" type="MeshInstance3D" parent="." unique_id=774501976]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140630" type="MeshInstance3D" parent="." unique_id=1836469934]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140631" type="MeshInstance3D" parent="." unique_id=666196460]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140632" type="MeshInstance3D" parent="." unique_id=1214112317]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140633" type="MeshInstance3D" parent="." unique_id=492186461]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 56, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140634" type="MeshInstance3D" parent="." unique_id=2112784333]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140635" type="MeshInstance3D" parent="." unique_id=1338610909]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140636" type="MeshInstance3D" parent="." unique_id=1575031123]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140637" type="MeshInstance3D" parent="." unique_id=289028081]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140638" type="MeshInstance3D" parent="." unique_id=244489067]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140639" type="MeshInstance3D" parent="." unique_id=654387823]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140640" type="MeshInstance3D" parent="." unique_id=1203141820]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140641" type="MeshInstance3D" parent="." unique_id=1893348415]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140642" type="MeshInstance3D" parent="." unique_id=1406389730]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140643" type="MeshInstance3D" parent="." unique_id=1251378466]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 106, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140644" type="MeshInstance3D" parent="." unique_id=508896175]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140645" type="MeshInstance3D" parent="." unique_id=1935819899]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140646" type="MeshInstance3D" parent="." unique_id=1694804854]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140647" type="MeshInstance3D" parent="." unique_id=248017851]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140648" type="MeshInstance3D" parent="." unique_id=1778364195]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140649" type="MeshInstance3D" parent="." unique_id=1057436115]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140650" type="MeshInstance3D" parent="." unique_id=1524565666]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140651" type="MeshInstance3D" parent="." unique_id=438471579]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140652" type="MeshInstance3D" parent="." unique_id=106043965]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140653" type="MeshInstance3D" parent="." unique_id=323429248]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 156, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140654" type="MeshInstance3D" parent="." unique_id=77892710]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -359.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140655" type="MeshInstance3D" parent="." unique_id=693009943]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -309.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140656" type="MeshInstance3D" parent="." unique_id=1926722092]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -259.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140657" type="MeshInstance3D" parent="." unique_id=645158025]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -209.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140658" type="MeshInstance3D" parent="." unique_id=1131856874]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -159.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140659" type="MeshInstance3D" parent="." unique_id=334712237]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -109.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140660" type="MeshInstance3D" parent="." unique_id=1993696264]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -59.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140661" type="MeshInstance3D" parent="." unique_id=1589723178]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, -9.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140662" type="MeshInstance3D" parent="." unique_id=985297158]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, 40.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
+
+[node name="@MeshInstance3D@140663" type="MeshInstance3D" parent="." unique_id=912789339]
+transform = Transform3D(-20, -7.788287e-06, 0, 7.788287e-06, -20, 0, 0, 0, 20, 206, 53.8, 90.5)
+transparency = 0.85
+mesh = SubResource("ArrayMesh_lpo3d")
