@@ -5,6 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://pm3gq0lmk6e8" path="res://Assets/materials/wallpaper/wallpaper_rough.png" id="3_pgmya"]
 [ext_resource type="PackedScene" uid="uid://d0growbm7rh5d" path="res://luces_backroom00.tscn" id="4_kshgl"]
 
+[sub_resource type="Gradient" id="Gradient_pgmya"]
+offsets = PackedFloat32Array(0, 0.52396166, 1)
+colors = PackedColorArray(0.1364708, 0.140625, 0.074157715, 1, 0.4772059, 0.50980395, 0.36078432, 1, 0.96484375, 0.9568937, 0.761322, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kshgl"]
+gradient = SubResource("Gradient_pgmya")
+
 [sub_resource type="Environment" id="Environment_6fj2g"]
 background_mode = 1
 background_color = Color(0.44903153, 0.52924794, 0.20506042, 1)
@@ -14,40 +21,53 @@ ambient_light_color = Color(0.44798273, 0.5364496, 0.17395222, 1)
 ambient_light_energy = 2.4
 reflected_light_source = 1
 tonemap_mode = 3
-tonemap_exposure = 0.86
+tonemap_exposure = 0.76
 ssr_enabled = true
 ssr_fade_in = 0.117687635
 ssao_enabled = true
-ssao_radius = 2.52
-ssao_intensity = 0.36
-ssao_power = 2.436757
-ssao_detail = 1.52
+ssao_radius = 6.17
+ssao_intensity = 3.97
+ssao_power = 1.176876
+ssao_detail = 1.56
 ssao_horizon = 0.11
-ssao_light_affect = 0.2
+ssao_light_affect = 0.73
 ssao_ao_channel_affect = 0.25
 ssil_enabled = true
-ssil_radius = 6.17
-ssil_intensity = 4.15
+ssil_radius = 2.35
+ssil_intensity = 6.02
+ssil_sharpness = 1.0
 sdfgi_enabled = true
 sdfgi_bounce_feedback = 0.28
 sdfgi_min_cell_size = 11.18
 glow_enabled = true
-glow_intensity = 0.06
-glow_strength = 1.12
-glow_hdr_threshold = 2.49
-glow_hdr_scale = 1.33
-glow_hdr_luminance_cap = 21.34
+glow_levels/1 = 1.47
+glow_levels/2 = 8.15
+glow_levels/3 = 4.6
+glow_levels/4 = 0.0
+glow_levels/5 = 0.67
+glow_normalized = true
+glow_intensity = 8.0
+glow_strength = 1.66
+glow_bloom = 0.01
+glow_hdr_threshold = 0.57
+glow_hdr_scale = 2.14
+glow_hdr_luminance_cap = 146.69
+glow_map_strength = 0.97
 fog_mode = 1
 fog_light_color = Color(0.462593, 0.41572893, 0.18140872, 1)
 fog_light_energy = 1.35
 fog_density = 0.1533
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.005
-volumetric_fog_albedo = Color(0.65866935, 0.71484375, 0.42723083, 1)
+volumetric_fog_albedo = Color(0.70477945, 0.7137255, 0.42745098, 1)
+volumetric_fog_emission_energy = 30.26
+volumetric_fog_ambient_inject = 0.24
+volumetric_fog_sky_affect = 0.0
 adjustment_enabled = true
-adjustment_brightness = 1.13
-adjustment_contrast = 1.25
-adjustment_saturation = 1.09
+adjustment_brightness = 0.99
+adjustment_contrast = 1.035
+adjustment_saturation = 1.25
+adjustment_color_correction = SubResource("GradientTexture2D_kshgl")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dnk4"]
 
@@ -128,7 +148,7 @@ shadow_mesh = SubResource("ArrayMesh_j3i2p")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kshgl"]
 albedo_color = Color(0.98828125, 0.9490733, 0.88790894, 1)
 emission_enabled = true
-emission = Color(0.9098039, 0.8980086, 0.60784316, 1)
+emission = Color(0.64, 0.63296, 0.42879996, 1)
 emission_energy_multiplier = 0.15
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_li34w"]

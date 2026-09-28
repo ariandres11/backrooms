@@ -24,7 +24,7 @@ offset_left = -2.0
 offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.7411765, 0.7294118, 0.38431373, 1)
+color = Color(0.7132966, 0.7411765, 0.38431373, 1)
 
 [node name="Label" type="Label" parent="." unique_id=420738050]
 layout_mode = 1
@@ -39,7 +39,7 @@ offset_right = 140.0
 offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.421875, 0.41115046, 0.3411255, 1)
+theme_override_colors/font_color = Color(0.28818512, 0.421875, 0.22741699, 1)
 theme_override_colors/font_shadow_color = Color(0.5937232, 0.61328125, 0.4815216, 0)
 theme_override_font_sizes/font_size = 60
 text = "Cargando...

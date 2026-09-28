@@ -5,7 +5,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_s3efq"]
 height = 62.717407
-radius = 9.817383
+radius = 16.988
 
 [node name="enemigo" type="CharacterBody3D" unique_id=2123854434]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
