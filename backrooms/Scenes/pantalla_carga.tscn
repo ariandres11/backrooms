@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cc5gdm1oeimef"]
 
-[ext_resource type="Script" uid="uid://ple1ago836n3" path="res://pantalla_carga.gd" id="1_8v8tq"]
+[ext_resource type="Script" uid="uid://pgtw1ja4dnd2" path="res://Scripts/pantalla_carga.gd" id="1_8v8tq"]
 [ext_resource type="Texture2D" uid="uid://ci8q4jpgv6s4o" path="res://Assets/Images/gdv_studio00.jpeg" id="2_b8s5c"]
 [ext_resource type="Texture2D" uid="uid://nqvb5magb84k" path="res://Assets/Images/gdv_studio01.png" id="3_7hubr"]
 
@@ -24,7 +24,7 @@ offset_left = -2.0
 offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.7132966, 0.7411765, 0.38431373, 1)
+color = Color(0.6635095, 0.5760844, 0.20330028, 1)
 
 [node name="Label" type="Label" parent="." unique_id=420738050]
 layout_mode = 1
@@ -39,7 +39,7 @@ offset_right = 140.0
 offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.28818512, 0.421875, 0.22741699, 1)
+theme_override_colors/font_color = Color(0.40136775, 0.39109933, 0.15516731, 1)
 theme_override_colors/font_shadow_color = Color(0.5937232, 0.61328125, 0.4815216, 0)
 theme_override_font_sizes/font_size = 60
 text = "Cargando...

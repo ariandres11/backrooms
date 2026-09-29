@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk6xiwkqh40vl"
-path="res://.godot/imported/Backrooms.icon.png-60c703268a4029eb4c15d4997c52196b.ctex"
+uid="uid://bfqwgtwl783ug"
+path="res://.godot/imported/Backrooms.icon.png-71ac1bf9cfcc0695d6da141e6e522c3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backrooms.icon.png"
-dest_files=["res://.godot/imported/Backrooms.icon.png-60c703268a4029eb4c15d4997c52196b.ctex"]
+source_file="res://Assets/Backrooms.icon.png"
+dest_files=["res://.godot/imported/Backrooms.icon.png-71ac1bf9cfcc0695d6da141e6e522c3c.ctex"]
 
 [params]
 
