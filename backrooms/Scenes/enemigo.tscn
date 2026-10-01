@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b686dc6it3txt"]
 
 [ext_resource type="Script" uid="uid://ekh3lem4kfjr" path="res://Scripts/enemigo.gd" id="1_a5tj2"]
-[ext_resource type="PackedScene" uid="uid://b22fej1rk6p6s" path="res://drunk_walking_turn.tscn" id="2_t4vig"]
+[ext_resource type="PackedScene" uid="uid://b22fej1rk6p6s" path="res://Scenes/drunk_walking_turn.tscn" id="2_t4vig"]
+[ext_resource type="AudioStream" uid="uid://cs8k418isrlx4" path="res://Assets/Sonidos/807449__deqsterslab__deep-voice-amen-creepy.mp3" id="3_6hm1l"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_s3efq"]
 height = 62.717407
@@ -30,3 +31,9 @@ debug_path_custom_point_size = 10.46
 
 [node name="Drunk Walking Turn" parent="." unique_id=2073370350 instance=ExtResource("2_t4vig")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1312201530]
+stream = ExtResource("3_6hm1l")
+volume_db = 14.785
+max_db = -21.258
+autoplay = true
