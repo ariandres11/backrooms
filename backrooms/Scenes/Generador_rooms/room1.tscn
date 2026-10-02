@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://javn006qwh70"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77csg"]
+albedo_color = Color(1, 1, 0.36862746, 1)
+
+[node name="room" unique_id=858342173]
+
+[node name="Cube" parent="." index="0" unique_id=270321984]
+visible = false
+
+[node name="Cube_001" parent="." index="1" unique_id=2144681913]
+surface_material_override/0 = SubResource("StandardMaterial3D_77csg")
+
+[node name="Plane" parent="." index="2" unique_id=230173845]
+surface_material_override/0 = SubResource("StandardMaterial3D_77csg")

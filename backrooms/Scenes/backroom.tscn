@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bdqlml6u23cvb" path="res://Assets/materials/wallpaper/wallpaper_normal.png" id="2_kshgl"]
 [ext_resource type="Texture2D" uid="uid://yarh347qpbrx" path="res://Assets/Modelos/backroom00_wallpaper_color.png" id="2_li34w"]
 [ext_resource type="Texture2D" uid="uid://pm3gq0lmk6e8" path="res://Assets/materials/wallpaper/wallpaper_rough.png" id="3_pgmya"]
-[ext_resource type="PackedScene" uid="uid://d0growbm7rh5d" path="res://luces_backroom00.tscn" id="4_kshgl"]
+[ext_resource type="PackedScene" uid="uid://d0growbm7rh5d" path="res://Scenes/luces_backroom00.tscn" id="4_kshgl"]
 
 [sub_resource type="Gradient" id="Gradient_pgmya"]
 offsets = PackedFloat32Array(0, 0.52396166, 1)
@@ -14,10 +14,10 @@ gradient = SubResource("Gradient_pgmya")
 
 [sub_resource type="Environment" id="Environment_6fj2g"]
 background_mode = 1
-background_color = Color(0.44903153, 0.52924794, 0.20506042, 1)
+background_color = Color(0.53703684, 0.49979955, 0.1493237, 1)
 background_energy_multiplier = 0.3
 ambient_light_source = 2
-ambient_light_color = Color(0.44798273, 0.5364496, 0.17395222, 1)
+ambient_light_color = Color(0.6438931, 0.6227152, 0.24379978, 1)
 ambient_light_energy = 2.4
 reflected_light_source = 1
 tonemap_mode = 3
@@ -46,7 +46,7 @@ glow_levels/3 = 4.6
 glow_levels/4 = 0.0
 glow_levels/5 = 0.67
 glow_normalized = true
-glow_intensity = 8.0
+glow_intensity = 0.27
 glow_strength = 1.66
 glow_bloom = 0.01
 glow_hdr_threshold = 0.57
@@ -262,6 +262,7 @@ shadow_mesh = SubResource("ArrayMesh_24max")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgmya"]
 albedo_color = Color(0.8980392, 0.87824756, 0.7490196, 1)
+metallic_specular = 0.61
 roughness = 0.24
 normal_enabled = true
 
@@ -311,6 +312,7 @@ shape = SubResource("ConcavePolygonShape3D_kshgl")
 
 [node name="Cube_004" type="MeshInstance3D" parent="." unique_id=691166719]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 6, 0, 2)
+gi_mode = 0
 mesh = SubResource("ArrayMesh_5k7kq")
 surface_material_override/0 = SubResource("StandardMaterial3D_pgmya")
 
