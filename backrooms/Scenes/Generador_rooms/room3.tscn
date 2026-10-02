@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d35konjjt2kf"]
 
-[ext_resource type="PackedScene" uid="uid://cxg3r7hay0s3j" path="res://Scenes/Generador_rooms/room.glb" id="1_lo6ab"]
+[ext_resource type="PackedScene" uid="uid://bkrhql3185n2" path="res://Scenes/Generador_rooms/room.gltf" id="1_lo6ab"]
 
 [node name="room" type="Node3D" unique_id=2040558926]
 
-[node name="room2" parent="." unique_id=1156313098 instance=ExtResource("1_lo6ab")]
+[node name="room" parent="." unique_id=952575138 instance=ExtResource("1_lo6ab")]

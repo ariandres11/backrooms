@@ -4,10 +4,11 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(5):
-		var tile = tileScene.instantiate()
-		
-		add_child(tile)
-		tile.position = Vector3(i*20,0,0)
+		for j in range(5):
+			var tile = tileScene.instantiate()
+			
+			add_child(tile)
+			tile.position = Vector3(i*20,0,j*20)
 		pass
 		
 	pass # Replace with function body.

@@ -61,5 +61,6 @@ navigation_mesh = SubResource("NavigationMesh_lym1s")
 [node name="backroom00" parent="NavigationRegion3D2" unique_id=805148933 instance=ExtResource("4_y2452")]
 
 [node name="grilla_rooms" parent="." unique_id=1620483281 instance=ExtResource("6_nv75r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.015633, 112.40903)
 
 [connection signal="game_over" from="enemigo" to="PanelGameOver" method="_on_enemigo_game_over"]
